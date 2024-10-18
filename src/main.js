@@ -106,11 +106,10 @@ k.scene("main", async () => {
 
         setCamScale(k)
 
-        adjustCanvasSize(k);
-       
+        adjustCanvasSize(k)
+        setCamScale
 
         k.onResize(() => {
-            adjustCanvasSize(k)
             setCamScale(k);
         });
 

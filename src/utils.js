@@ -39,17 +39,7 @@ export function setCamScale(k) {
     const resizeFactor = k.width () / k.height();
     if (resizeFactor < 1) {
         k.camScale(k.vec2(1));
-    } else {
-    k.camScale(k.vec2(1.5));
+        return;
     }
+    k.camScale(k.vec2(1.5));
 }
-
-// Added function
-export function adjustCanvasSize(k) {
-    const canvas = document.getElementById("game");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    k.width = window.innerWidth;
-    k.height = window.innerHeight;
-}
-
